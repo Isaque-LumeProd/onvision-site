@@ -421,12 +421,21 @@ function updateSummary() {
 
   const sumContato = $('#sum-contato');
   const nome = fNome.value.trim();
-  if (nome || fBairro.value.trim() || fTel.value.trim()) {
+  const bairro = fBairro.value.trim();
+  const tel = fTel.value.trim();
+
+  if (nome || bairro || tel) {
     sumContato.className = 'mt-1.5 space-y-0.5 font-semibold text-white';
-    sumContato.innerHTML = [nome, fBairro.value.trim() && `${fBairro.value.trim()} • Três Lagoas/MS`, fTel.value.trim()]
-      .filter(Boolean)
-      .map((t) => `<span class="block">${t.replace(/</g, '&lt;')}</span>`)
-      .join('');
+    sumContato.replaceChildren(
+      ...[nome, bairro && `${bairro} • Três Lagoas/MS`, tel]
+        .filter(Boolean)
+        .map((t) => {
+          const s = document.createElement('span');
+          s.className = 'block';
+          s.textContent = t;
+          return s;
+        })
+    );
   } else {
     sumContato.className = 'mt-1.5 font-semibold text-steel italic';
     sumContato.textContent = 'Aguardando dados';
