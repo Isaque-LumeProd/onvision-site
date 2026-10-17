@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-cidade="Andradina" data-uf="SP" data-ddd="18" data-unit="#AD-0112">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,12 +47,31 @@
           "addressCountry": "BR"
         },
         "areaServed": [
-          { "@type": "City", "name": "Andradina" },
-          { "@type": "City", "name": "Castilho" },
-          { "@type": "City", "name": "Nova Independência" },
-          { "@type": "City", "name": "Guaraçaí" },
-          { "@type": "AdministrativeArea", "name": "São Paulo" }
-        ],
+  {
+    "@type": "City",
+    "name": "Andradina"
+  },
+  {
+    "@type": "City",
+    "name": "Castilho"
+  },
+  {
+    "@type": "City",
+    "name": "Nova Independência"
+  },
+  {
+    "@type": "City",
+    "name": "Guaraçaí"
+  },
+  {
+    "@type": "City",
+    "name": "Murutinga do Sul"
+  },
+  {
+    "@type": "AdministrativeArea",
+    "name": "São Paulo"
+  }
+],
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -132,7 +151,7 @@
 
     <main id="conteudo">
       <!-- =====================================================
-           B. HERO ANDRADINA
+           B. HERO
       ====================================================== -->
       <section id="inicio" class="relative isolate overflow-hidden bg-abyss pt-32 pb-20 sm:pt-36 lg:pt-40 lg:pb-28">
         <div class="bg-grid mask-fade-b absolute inset-0 -z-10" aria-hidden="true"></div>
@@ -151,7 +170,7 @@
             </h1>
 
             <p class="reveal mt-6 max-w-xl text-lg leading-relaxed text-tech" style="--d: 160ms">
-              Da engenharia elétrica ao monitoramento 24 horas para residências, comércios, condomínios e indústrias em Andradina. A única com
+              Da engenharia elétrica ao monitoramento 24 horas para residências, comércios, condomínios e empresas em Andradina. A única com
               <strong class="font-bold text-laser">Seguro Contra Furtos incluso no contrato.</strong>
             </p>
 
@@ -173,7 +192,7 @@
             </ul>
           </div>
 
-          <!-- Painel de Telemetria Andradina -->
+          <!-- Painel de Telemetria -->
           <div class="reveal relative" style="--d: 200ms">
             <div class="absolute -inset-6 -z-10 rounded-[2.5rem] bg-linear-to-br from-laser/15 via-transparent to-forest/30 blur-2xl" aria-hidden="true"></div>
 
@@ -299,8 +318,8 @@
             <p class="mt-2 text-sm leading-relaxed text-tech">com cobertura exclusiva contra furtos.</p>
           </div>
           <div class="reveal border-t border-l border-forest px-4 py-10 sm:px-6 lg:border-t-0 lg:border-l-0" style="--d: 240ms">
-            <p class="flex items-center gap-2 font-display text-2xl font-extrabold tracking-tight text-white sm:text-3xl"><i data-lucide="layers" class="size-7 text-laser"></i> Solução Completa</p>
-            <p class="mt-2 text-sm leading-relaxed text-tech">Segurança Eletrônica + Elétrica em Andradina.</p>
+            <p class="font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl">100<span class="text-laser">%</span></p>
+            <p class="mt-2 text-sm leading-relaxed text-tech">própria: central, frotas e equipe técnica.</p>
           </div>
         </div>
       </section>
@@ -308,145 +327,209 @@
       <!-- =====================================================
            D. SOLUÇÕES EM ANDRADINA
       ====================================================== -->
-      <section id="solucoes" class="relative bg-paper py-24 text-ink sm:py-32">
-        <div class="bg-grid-light mask-radial absolute inset-0" aria-hidden="true"></div>
-        <div class="container-x relative">
-          <div class="mx-auto max-w-3xl text-center">
-            <span class="reveal eyebrow text-forest"><span class="h-px w-6 bg-forest"></span> Soluções para Andradina/SP <span class="h-px w-6 bg-forest"></span></span>
-            <h2 class="reveal mt-4 text-3xl leading-tight font-extrabold text-abyss sm:text-[2.75rem]" style="--d: 60ms">Proteção Total para seu Imóvel em Andradina</h2>
-            <p class="reveal mt-5 text-lg leading-relaxed text-ink/80" style="--d: 120ms">Vigilância com câmeras de alta definição, alarmes perimetrais e infraestrutura elétrica sem vulnerabilidades.</p>
+      <section id="solucoes" class="relative bg-abyss py-24 sm:py-32">
+        <div class="container-x">
+          <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <span class="reveal eyebrow text-laser"><i data-lucide="layers" class="size-4"></i> Soluções Integradas</span>
+              <h2 class="reveal mt-4 text-3xl leading-tight font-extrabold text-white sm:text-[2.75rem]" style="--d: 60ms">
+                Proteção completa para seu imóvel em Andradina
+              </h2>
+            </div>
+            <div class="reveal flex flex-wrap gap-2" style="--d: 120ms">
+              <button type="button" class="filter-chip filter-chip-active" data-filter="todos" aria-pressed="true">Todas as Soluções</button>
+              <button type="button" class="filter-chip" data-filter="monitoramento" aria-pressed="false">Monitoramento & CFTV</button>
+              <button type="button" class="filter-chip" data-filter="acesso" aria-pressed="false">Controle de Acesso</button>
+              <button type="button" class="filter-chip" data-filter="eletrica" aria-pressed="false">Engenharia Elétrica</button>
+            </div>
           </div>
 
-          <!-- Filtros -->
-          <div class="reveal mt-12 flex flex-wrap justify-center gap-2.5" role="tablist" aria-label="Filtrar soluções" style="--d: 160ms">
-            <button type="button" class="filter-chip is-active" data-filter="todos" id="filter-todos" role="tab" aria-selected="true"><i data-lucide="sparkles" class="size-4"></i> Todas</button>
-            <button type="button" class="filter-chip" data-filter="protecao" id="filter-protecao" role="tab" aria-selected="false"><i data-lucide="radar" class="size-4"></i> Proteção 24h</button>
-            <button type="button" class="filter-chip" data-filter="tecnologia" id="filter-tecnologia" role="tab" aria-selected="false"><i data-lucide="cctv" class="size-4"></i> Tecnologia &amp; Acesso</button>
-            <button type="button" class="filter-chip" data-filter="eletrica" id="filter-eletrica" role="tab" aria-selected="false"><i data-lucide="zap" class="size-4"></i> Engenharia Elétrica</button>
-          </div>
-
-          <!-- Cards -->
-          <div id="services-grid" class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            <article class="service-card reveal !border-forest/80 !bg-abyss text-tech md:col-span-2 lg:col-span-2" data-category="protecao">
-              <div class="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl" aria-hidden="true">
-                <div class="bg-grid absolute inset-0 opacity-60"></div>
-                <div class="absolute -top-24 -right-24 size-80 rounded-full bg-[radial-gradient(closest-side,rgba(108,255,0,.2),transparent)]"></div>
-              </div>
-              <div class="relative flex h-full flex-col">
-                <div class="flex flex-wrap items-start justify-between gap-4">
-                  <div class="grid size-14 place-items-center rounded-2xl bg-laser text-abyss shadow-lg shadow-laser/30"><i data-lucide="monitor-check" class="size-7"></i></div>
-                  <span class="inline-flex items-center gap-1.5 rounded-full border border-laser/40 bg-laser/10 px-3 py-1 text-xs font-bold text-laser"><i data-lucide="shield-check" class="size-3.5"></i> + Seguro Contra Furtos</span>
+          <div id="services-grid" class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- 1. Monitoramento 24h -->
+            <article class="reveal group relative flex flex-col justify-between rounded-3xl border border-laser/40 bg-gradient-to-b from-forest/70 via-forest/30 to-abyss p-8 shadow-[0_20px_60px_-20px_rgba(108,255,0,.25)]" data-category="monitoramento">
+              <div>
+                <div class="flex items-center justify-between">
+                  <div class="grid size-12 place-items-center rounded-2xl bg-laser/20 text-laser"><i data-lucide="monitor-check" class="size-6"></i></div>
+                  <span class="rounded-full border border-laser/40 bg-laser/10 px-3 py-1 font-mono text-[10px] font-bold text-laser uppercase">Com Seguro Contra Furtos</span>
                 </div>
-                <h3 class="mt-6 text-2xl font-bold text-white sm:text-[1.7rem]">Monitoramento 24h em Andradina</h3>
-                <p class="mt-3 max-w-xl leading-relaxed text-tech">Central própria operando 24/7 com verificação humana imediata em Andradina. Disparo confirmado aciona viaturas de pronta resposta no local.</p>
-                <ul class="mt-6 grid gap-x-6 gap-y-2.5 text-sm text-white/90 sm:grid-cols-2">
-                  <li class="flex items-center gap-2"><i data-lucide="circle-check" class="size-4 text-laser"></i> Verificação de eventos em tempo real</li>
-                  <li class="flex items-center gap-2"><i data-lucide="circle-check" class="size-4 text-laser"></i> Apoio tático ágil em Andradina/SP</li>
-                  <li class="flex items-center gap-2"><i data-lucide="circle-check" class="size-4 text-laser"></i> Apólice de seguro contra furtos inclusa</li>
-                  <li class="flex items-center gap-2"><i data-lucide="circle-check" class="size-4 text-laser"></i> Comunicação redundante fibra + 4G</li>
+                <h3 class="mt-6 font-display text-xl font-bold text-white">Monitoramento 24h Inteligente</h3>
+                <p class="mt-3 text-sm leading-relaxed text-tech">
+                  Central com analíticos em tempo real e operadores dedicados para pronta resposta em Andradina.
+                </p>
+                <ul class="mt-6 space-y-2 text-xs text-white/90">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Comunicação redundante via fibra e 4G</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Apoio tático ágil com ronda motorizada</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Seguro contra furtos incluso em contrato</li>
                 </ul>
-                <div class="mt-auto flex flex-wrap items-center justify-between gap-4 pt-8">
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="tag !bg-forest/60 !text-tech">Residencial</span><span class="tag !bg-forest/60 !text-tech">Comercial</span><span class="tag !bg-forest/60 !text-tech">Condomínios</span><span class="tag !bg-forest/60 !text-tech">Agronegócio &amp; Galpões</span>
-                  </div>
-                  <button type="button" class="btn btn-primary !py-3" data-quote="monitoramento" id="quote-monitoramento">Cotar em Andradina <i data-lucide="arrow-right" class="size-4"></i></button>
+              </div>
+              <button type="button" data-quote="monitoramento" class="btn btn-ghost-dark mt-8 w-full !py-2.5 text-xs">Adicionar ao Simulador</button>
+            </article>
+
+            <!-- 2. CFTV -->
+            <article class="reveal group relative flex flex-col justify-between rounded-3xl border border-forest/80 bg-forest/40 p-8 backdrop-blur" data-category="monitoramento" style="--d: 80ms">
+              <div>
+                <div class="grid size-12 place-items-center rounded-2xl bg-forest/60 text-laser"><i data-lucide="cctv" class="size-6"></i></div>
+                <h3 class="mt-6 font-display text-xl font-bold text-white">CFTV & Câmeras com IA</h3>
+                <p class="mt-3 text-sm leading-relaxed text-tech">Câmeras IP com visão noturna colorida, reconhecimento facial e leitura de placas.</p>
+                <ul class="mt-6 space-y-2 text-xs text-white/90">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Imagens Full HD e 4K na nuvem</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Linha virtual de intrusão com alerta push</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Acesso total no celular pelo app</li>
+                </ul>
+              </div>
+              <button type="button" data-quote="cftv" class="btn btn-ghost-dark mt-8 w-full !py-2.5 text-xs">Adicionar ao Simulador</button>
+            </article>
+
+            <!-- 3. Controle de Acesso -->
+            <article class="reveal group relative flex flex-col justify-between rounded-3xl border border-forest/80 bg-forest/40 p-8 backdrop-blur" data-category="acesso" style="--d: 160ms">
+              <div>
+                <div class="grid size-12 place-items-center rounded-2xl bg-forest/60 text-laser"><i data-lucide="fingerprint" class="size-6"></i></div>
+                <h3 class="mt-6 font-display text-xl font-bold text-white">Controle de Acesso & Portaria</h3>
+                <p class="mt-3 text-sm leading-relaxed text-tech">Leitura facial ultrarrápida, biometria e cancelas automáticas para condomínios e indústrias.</p>
+                <ul class="mt-6 space-y-2 text-xs text-white/90">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Reconhecimento facial anti-fraude</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Gestão de prestadores e visitantes</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Integração com portaria remota</li>
+                </ul>
+              </div>
+              <button type="button" data-quote="acesso" class="btn btn-ghost-dark mt-8 w-full !py-2.5 text-xs">Adicionar ao Simulador</button>
+            </article>
+
+            <!-- 4. Rondas -->
+            <article class="reveal group relative flex flex-col justify-between rounded-3xl border border-forest/80 bg-forest/40 p-8 backdrop-blur" data-category="acesso" style="--d: 240ms">
+              <div>
+                <div class="grid size-12 place-items-center rounded-2xl bg-forest/60 text-laser"><i data-lucide="car" class="size-6"></i></div>
+                <h3 class="mt-6 font-display text-xl font-bold text-white">Rondas & Apoio Tático</h3>
+                <p class="mt-3 text-sm leading-relaxed text-tech">Rondas preventivas com viaturas identificadas e checagem de pontos perimetrais.</p>
+                <ul class="mt-6 space-y-2 text-xs text-white/90">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Viaturas próprias e agentes treinados</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Rastreamento GPS e telemetria de ronda</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Relatório digital de cada visita</li>
+                </ul>
+              </div>
+              <button type="button" data-quote="rondas" class="btn btn-ghost-dark mt-8 w-full !py-2.5 text-xs">Adicionar ao Simulador</button>
+            </article>
+
+            <!-- 5. Engenharia Elétrica -->
+            <article class="reveal group relative flex flex-col justify-between rounded-3xl border border-forest/80 bg-forest/40 p-8 backdrop-blur" data-category="eletrica" style="--d: 320ms">
+              <div>
+                <div class="grid size-12 place-items-center rounded-2xl bg-forest/60 text-laser"><i data-lucide="zap" class="size-6"></i></div>
+                <h3 class="mt-6 font-display text-xl font-bold text-white">Engenharia Elétrica & Manutenção</h3>
+                <p class="mt-3 text-sm leading-relaxed text-tech">Projetos elétricos, laudos NR10/SPDA, nobreaks, quadros e infraestrutura blindada.</p>
+                <ul class="mt-6 space-y-2 text-xs text-white/90">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Engenheiro responsável com ART</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Estudo e adequação de nobreak/gerador</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="size-3.5 text-laser"></i> Proteção contra surtos elétricos</li>
+                </ul>
+              </div>
+              <button type="button" data-quote="eletrica" class="btn btn-ghost-dark mt-8 w-full !py-2.5 text-xs">Adicionar ao Simulador</button>
+            </article>
+
+            <!-- 6. Card Seguro Destaque -->
+            <article class="reveal group relative flex flex-col justify-between rounded-3xl border border-laser bg-gradient-to-br from-forest via-forest/70 to-abyss p-8 shadow-[0_20px_80px_-20px_rgba(108,255,0,.3)]" data-category="monitoramento" style="--d: 400ms">
+              <div>
+                <div class="grid size-12 place-items-center rounded-2xl bg-laser text-abyss"><i data-lucide="shield-check" class="size-6"></i></div>
+                <h3 class="mt-6 font-display text-xl font-bold text-white">Seguro Contra Furtos Incluso</h3>
+                <p class="mt-3 text-sm leading-relaxed text-tech">
+                  Não entregamos só alarme: se houver sinistro, seu patrimônio em Andradina está coberto por apólice em contrato.
+                </p>
+                <div class="mt-6 rounded-2xl border border-laser/30 bg-abyss/60 p-4">
+                  <p class="text-xs text-tech">Diferencial exclusivo OnVision no Bolsão e Oeste Paulista.</p>
                 </div>
               </div>
-            </article>
-
-            <article class="service-card reveal" data-category="tecnologia" style="--d: 80ms">
-              <div class="grid size-14 place-items-center rounded-2xl bg-forest/10 text-forest"><i data-lucide="cctv" class="size-7"></i></div>
-              <h3 class="mt-6 text-xl font-bold text-abyss">CFTV e Alarmes Inteligentes</h3>
-              <p class="mt-3 leading-relaxed text-ink/80">Instalação de câmeras IP com inteligência artificial, gravação em nuvem e cercas elétricas de alta potência.</p>
-              <div class="mt-auto pt-7">
-                <button type="button" class="group inline-flex items-center gap-2 text-sm font-bold text-forest hover:text-abyss" data-quote="cftv" id="quote-cftv">Cotar este serviço <i data-lucide="arrow-right" class="size-4 transition-transform group-hover:translate-x-1"></i></button>
-              </div>
-            </article>
-
-            <article class="service-card reveal" data-category="tecnologia">
-              <div class="grid size-14 place-items-center rounded-2xl bg-forest/10 text-forest"><i data-lucide="scan-face" class="size-7"></i></div>
-              <h3 class="mt-6 text-xl font-bold text-abyss">Controle de Acesso &amp; Portaria</h3>
-              <p class="mt-3 leading-relaxed text-ink/80">Reconhecimento facial, cancelas e tags veiculares para empresas e condomínios em Andradina.</p>
-              <div class="mt-auto pt-7">
-                <button type="button" class="group inline-flex items-center gap-2 text-sm font-bold text-forest hover:text-abyss" data-quote="acesso" id="quote-acesso">Cotar este serviço <i data-lucide="arrow-right" class="size-4 transition-transform group-hover:translate-x-1"></i></button>
-              </div>
-            </article>
-
-            <article class="service-card reveal" data-category="protecao" style="--d: 80ms">
-              <div class="grid size-14 place-items-center rounded-2xl bg-forest/10 text-forest"><i data-lucide="siren" class="size-7"></i></div>
-              <h3 class="mt-6 text-xl font-bold text-abyss">Rondas e Apoio Tático</h3>
-              <p class="mt-3 leading-relaxed text-ink/80">Rondas preventivas e checagem física de disparos com viaturas equipadas.</p>
-              <div class="mt-auto pt-7">
-                <button type="button" class="group inline-flex items-center gap-2 text-sm font-bold text-forest hover:text-abyss" data-quote="rondas" id="quote-rondas">Cotar este serviço <i data-lucide="arrow-right" class="size-4 transition-transform group-hover:translate-x-1"></i></button>
-              </div>
-            </article>
-
-            <article class="service-card reveal" data-category="eletrica" style="--d: 160ms">
-              <div class="grid size-14 place-items-center rounded-2xl bg-forest/10 text-forest"><i data-lucide="zap" class="size-7"></i></div>
-              <h3 class="mt-6 text-xl font-bold text-abyss">Engenharia &amp; Manutenção Elétrica</h3>
-              <p class="mt-3 leading-relaxed text-ink/80">Quadros de distribuição, projetos residenciais e industriais, iluminação e manutenção corretiva.</p>
-              <div class="mt-auto pt-7">
-                <button type="button" class="group inline-flex items-center gap-2 text-sm font-bold text-forest hover:text-abyss" data-quote="eletrica" id="quote-eletrica">Cotar este serviço <i data-lucide="arrow-right" class="size-4 transition-transform group-hover:translate-x-1"></i></button>
-              </div>
+              <a href="#seguro" class="btn btn-primary mt-8 w-full !py-2.5 text-xs">Entenda a Cobertura</a>
             </article>
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-           E. SEGURO CONTRA FURTOS EM ANDRADINA
+           E. SEGURO CONTRA FURTOS
       ====================================================== -->
-      <section id="seguro" class="relative isolate overflow-hidden bg-abyss py-24 sm:py-32">
-        <div class="bg-grid mask-radial absolute inset-0 -z-10 opacity-70" aria-hidden="true"></div>
-        <div class="absolute top-1/2 left-1/2 -z-10 h-[700px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(108,255,0,.12),transparent)]" aria-hidden="true"></div>
-
-        <div class="container-x">
-          <div class="relative overflow-hidden rounded-[2rem] border border-laser/30 bg-linear-to-b from-forest/90 to-abyss p-7 shadow-[0_0_0_1px_rgba(108,255,0,.1),0_40px_120px_-50px_rgba(108,255,0,.3)] sm:p-12 lg:p-16">
-            <div class="absolute inset-x-12 top-0 h-px bg-linear-to-r from-transparent via-laser to-transparent" aria-hidden="true"></div>
-
-            <div class="grid items-center gap-12 lg:grid-cols-[1.25fr_1fr] lg:gap-16">
-              <div>
-                <span class="reveal eyebrow text-laser"><i data-lucide="award" class="size-4"></i> Exclusivo em Andradina e Região</span>
-                <h2 class="reveal mt-5 text-3xl leading-tight font-extrabold text-white sm:text-[2.75rem]" style="--d: 60ms">
-                  Mais que Alarme: <span class="text-gradient-laser">Seu Imóvel em Andradina com Garantia no Contrato.</span>
-                </h2>
-                <p class="reveal mt-6 text-lg leading-relaxed text-tech" style="--d: 120ms">
-                  Não basta instalar câmeras que apenas mostram o que aconteceu. Na OnVision, clientes monitorados em Andradina contam com
-                  <strong class="font-bold text-laser">Seguro Contra Furtos incluso</strong> na mensalidade. Prevenção física ativa somada à proteção financeira real.
-                </p>
-                <div class="reveal mt-9 flex flex-col gap-3 sm:flex-row" style="--d: 180ms">
-                  <button type="button" class="btn btn-laser" data-quote="monitoramento" id="seguro-cta">
-                    <i data-lucide="shield-check" class="size-4"></i> Quero meu imóvel segurado em Andradina
-                  </button>
+      <section id="seguro" class="relative isolate overflow-hidden bg-forest/80 py-24 sm:py-32">
+        <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-laser/50 to-transparent" aria-hidden="true"></div>
+        <div class="container-x grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <span class="reveal eyebrow text-laser"><i data-lucide="award" class="size-4"></i> Exclusividade OnVision</span>
+            <h2 class="reveal mt-4 text-3xl leading-tight font-extrabold text-white sm:text-[2.75rem]" style="--d: 60ms">
+              A única empresa da região com <span class="text-laser">Seguro Contra Furtos</span> incluso no contrato.
+            </h2>
+            <p class="reveal mt-6 text-lg leading-relaxed text-tech" style="--d: 120ms">
+              Outras empresas apenas avisam que o alarme tocou. A OnVision assume o compromisso de proteger o seu imóvel em Andradina. Se o sistema falhar e houver invasão com furto qualificado, a apólice indeniza o prejuízo.
+            </p>
+            <div class="reveal mt-8 space-y-4" style="--d: 180ms">
+              <div class="flex items-start gap-3.5">
+                <span class="grid size-7 shrink-0 place-items-center rounded-full bg-laser/20 text-laser"><i data-lucide="badge-check" class="size-4"></i></span>
+                <div>
+                  <h3 class="font-bold text-white">Cobertura formal em contrato</h3>
+                  <p class="text-sm text-tech">Cláusula clara, sem pegadinhas ou letras miúdas.</p>
                 </div>
               </div>
-
-              <!-- Escudo -->
-              <div class="reveal relative mx-auto grid aspect-square w-full max-w-[340px] place-items-center" style="--d: 120ms" aria-hidden="true">
-                <div class="absolute inset-0 rounded-full border border-laser/20"></div>
-                <div class="absolute inset-8 rounded-full border border-dashed border-forest animate-spin-slow"></div>
-                <div class="absolute inset-16 animate-ring rounded-full border-2 border-laser/40"></div>
-                <div class="relative grid size-36 place-items-center rounded-[2rem] bg-laser text-abyss shadow-[0_20px_60px_-10px_rgba(108,255,0,.6)] sm:size-40">
-                  <i data-lucide="shield-check" class="size-20" stroke-width="1.6"></i>
+              <div class="flex items-start gap-3.5">
+                <span class="grid size-7 shrink-0 place-items-center rounded-full bg-laser/20 text-laser"><i data-lucide="badge-check" class="size-4"></i></span>
+                <div>
+                  <h3 class="font-bold text-white">Para residências, comércios e empresas</h3>
+                  <p class="text-sm text-tech">Proteção dimensionada para o valor do seu patrimônio em Andradina.</p>
                 </div>
-                <span class="glass absolute top-6 -right-2 rounded-xl px-3 py-2 text-xs font-semibold text-white sm:right-0"><span class="text-laser">●</span> Apólice ativa</span>
-                <span class="glass absolute bottom-8 -left-2 rounded-xl px-3 py-2 text-xs font-semibold text-white sm:left-0"><span class="text-laser">●</span> Andradina 24h</span>
               </div>
+              <div class="flex items-start gap-3.5">
+                <span class="grid size-7 shrink-0 place-items-center rounded-full bg-laser/20 text-laser"><i data-lucide="badge-check" class="size-4"></i></span>
+                <div>
+                  <h3 class="font-bold text-white">Tranquilidade real para sua família</h3>
+                  <p class="text-sm text-tech">Durma em paz sabendo que seu imóvel tem retaguarda financeira.</p>
+                </div>
+              </div>
+            </div>
+            <div class="reveal mt-10" style="--d: 240ms">
+              <a href="#simulador" class="btn btn-primary"><i data-lucide="calendar-check" class="size-4"></i> Simular com Seguro Incluso</a>
+            </div>
+          </div>
+
+          <div class="reveal relative" style="--d: 160ms">
+            <div class="rounded-3xl border border-laser/40 bg-gradient-to-b from-forest/80 to-abyss p-8 shadow-2xl">
+              <div class="flex items-center justify-between border-b border-forest pb-6">
+                <div class="flex items-center gap-3">
+                  <div class="grid size-12 place-items-center rounded-2xl bg-laser text-abyss"><i data-lucide="shield-check" class="size-7"></i></div>
+                  <div>
+                    <h3 class="font-display text-lg font-bold text-white">Garantia OnVision</h3>
+                    <p class="text-xs text-tech">Válida para Andradina/SP</p>
+                  </div>
+                </div>
+                <span class="rounded-full bg-laser/20 px-3 py-1 font-mono text-xs font-bold text-laser">100% REGIONAL</span>
+              </div>
+              <dl class="mt-6 space-y-4 text-sm">
+                <div class="flex justify-between border-b border-forest/60 pb-3">
+                  <dt class="text-tech">Tempo de mercado</dt>
+                  <dd class="font-bold text-white">+10 anos de operação</dd>
+                </div>
+                <div class="flex justify-between border-b border-forest/60 pb-3">
+                  <dt class="text-tech">Central de Monitoramento</dt>
+                  <dd class="font-bold text-laser">Própria • 24 horas</dd>
+                </div>
+                <div class="flex justify-between border-b border-forest/60 pb-3">
+                  <dt class="text-tech">Vistoria presencial em Andradina</dt>
+                  <dd class="font-bold text-white">Gratuita e sem compromisso</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-tech">Suporte técnico</dt>
+                  <dd class="font-bold text-white">Equipe e viaturas próprias</dd>
+                </div>
+              </dl>
             </div>
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-           F. SOBRE — ATENDIMENTO EM ANDRADINA
+           F. SOBRE NÓS / ATENDIMENTO EM ANDRADINA
       ====================================================== -->
-      <section id="sobre" class="relative overflow-hidden bg-paper py-24 text-ink sm:py-32">
-        <div class="container-x grid items-center gap-16 lg:grid-cols-2">
+      <section id="sobre" class="relative bg-white py-24 sm:py-32">
+        <div class="container-x grid items-center gap-14 lg:grid-cols-2">
           <div class="reveal relative">
-            <div class="relative overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-40px_rgba(5,10,7,.4)]">
-              <img src="/images/central-monitoramento.jpg" alt="Central de monitoramento da OnVision com operadores 24 horas" width="1200" height="896" loading="lazy" class="aspect-[4/3.4] w-full object-cover" />
-              <div class="absolute inset-0 bg-linear-to-t from-abyss/60 via-transparent to-transparent"></div>
-              <div class="absolute bottom-5 left-5 flex items-center gap-2 rounded-full bg-abyss/80 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
+            <div class="relative overflow-hidden rounded-3xl border border-forest/15 shadow-2xl">
+              <img src="/images/central-monitoramento.jpg" alt="Central de Monitoramento OnVision atendendo Andradina" width="800" height="600" loading="lazy" class="h-[420px] w-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-abyss/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 inline-flex items-center gap-2 rounded-full border border-laser/40 bg-abyss/80 px-3.5 py-1.5 font-mono text-xs text-laser backdrop-blur">
                 <span class="status-dot"></span> Central própria • Atendendo Andradina/SP
               </div>
             </div>
@@ -481,7 +564,7 @@
       </section>
 
       <!-- =====================================================
-           G. SIMULADOR ANDRADINA
+           G. SIMULADOR
       ====================================================== -->
       <section id="simulador" class="relative isolate overflow-hidden bg-abyss py-24 sm:py-32">
         <div class="bg-grid mask-fade-b absolute inset-0 -z-10" aria-hidden="true"></div>
@@ -585,7 +668,7 @@
                   </div>
                   <div>
                     <label for="f-bairro" class="mb-2 block text-sm font-medium text-white/90">Bairro em Andradina/SP</label>
-                    <input id="f-bairro" name="bairro" type="text" class="field" placeholder="Ex.: Stella Maris, Centro, Vila Mineira..." />
+                    <input id="f-bairro" name="bairro" type="text" class="field" placeholder="Ex.: Stella Maris, Centro..." />
                     <p class="field-error mt-1.5 hidden text-xs text-rose-300">Informe o bairro em Andradina.</p>
                   </div>
                   <div>
@@ -657,9 +740,9 @@
     </main>
 
     <!-- =====================================================
-         H. FOOTER ANDRADINA
-      ====================================================== -->
-      <footer id="contato" class="border-t border-forest bg-forest pt-20 pb-10">
+         H. FOOTER
+    ====================================================== -->
+    <footer id="contato" class="border-t border-forest bg-forest pt-20 pb-10">
       <div class="container-x">
         <div class="mb-16 flex flex-col items-start justify-between gap-6 rounded-3xl border border-laser/20 bg-linear-to-r from-abyss via-forest to-abyss p-8 sm:p-10 lg:flex-row lg:items-center">
           <div>
@@ -725,6 +808,6 @@
       <i data-lucide="circle-check" class="size-4 text-laser"></i><span id="toast-text"></span>
     </div>
 
-    <script type="module" src="/src/andradina.js"></script>
+    <script type="module" src="/src/city-landing.js"></script>
   </body>
 </html>
