@@ -106,19 +106,19 @@
          A. HEADER
     ====================================================== -->
     <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-all duration-500">
-      <div class="container-x flex h-[76px] items-center justify-between gap-4">
-        <div class="flex items-center gap-4">
-          <a href="#inicio" id="logo-link" class="flex items-center gap-2" aria-label="OnVision Bataguassu — Início">
+      <div class="container-x flex h-[76px] items-center justify-between gap-3 lg:gap-4 xl:gap-6">
+        <div class="flex shrink-0 items-center gap-3 xl:gap-4">
+          <a href="#inicio" id="logo-link" class="flex shrink-0 items-center gap-2" aria-label="OnVision Bataguassu — Início">
             <img src="/logo/onvision-logo.png" alt="OnVision" width="180" height="54" class="h-8 w-auto sm:h-9 object-contain" />
-            <span class="hidden rounded border border-forest/80 bg-forest/40 px-2 py-0.5 font-mono text-[10px] font-bold text-laser uppercase sm:inline-block">Bataguassu/MS</span>
+            <span class="hidden rounded border border-forest/80 bg-forest/40 px-2 py-0.5 font-mono text-[10px] font-bold text-laser uppercase shrink-0 sm:inline-block">Bataguassu/MS</span>
           </a>
-          <span class="hidden items-center gap-2 rounded-full border border-laser/30 bg-laser/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-laser uppercase md:inline-flex">
+          <span class="hidden items-center gap-2 rounded-full border border-laser/30 bg-laser/10 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-laser uppercase whitespace-nowrap shrink-0 xl:inline-flex">
             <span class="status-dot"></span> Plantão Bataguassu 24h
           </span>
         </div>
 
-        <nav aria-label="Navegação principal" class="hidden lg:block">
-          <ul class="flex items-center gap-1">
+        <nav aria-label="Navegação principal" class="hidden shrink-0 lg:block">
+          <ul class="flex items-center gap-0.5 xl:gap-1.5">
             <li><a class="nav-link" href="#solucoes" id="nav-solucoes">Soluções</a></li>
             <li><a class="nav-link" href="#seguro" id="nav-seguro">Seguro Contra Furtos</a></li>
             <li><a class="nav-link" href="#sobre" id="nav-sobre">Atendimento Bataguassu</a></li>
@@ -126,9 +126,11 @@
           </ul>
         </nav>
 
-        <div class="flex items-center gap-2">
-          <a href="#simulador" id="header-cta" class="btn btn-primary hidden !px-5 !py-3 text-sm sm:inline-flex">
-            <i data-lucide="calendar-check" class="size-4"></i> Vistoria em Bataguassu
+        <div class="flex shrink-0 items-center gap-2">
+          <a href="#simulador" id="header-cta" class="btn btn-primary hidden shrink-0 !px-4 !py-2.5 text-xs sm:inline-flex xl:!px-5 xl:!py-3 xl:text-sm">
+            <i data-lucide="calendar-check" class="size-4 shrink-0"></i>
+            <span class="hidden lg:inline xl:hidden">Vistoria</span>
+            <span class="inline lg:hidden xl:inline">Vistoria em Bataguassu</span>
           </a>
           <button id="menu-toggle" type="button" class="grid size-11 place-items-center rounded-xl border border-forest/80 bg-forest/40 text-white lg:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
             <i data-lucide="menu" class="size-5"></i>

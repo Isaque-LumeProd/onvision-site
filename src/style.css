@@ -105,14 +105,14 @@
   }
 
   .nav-link {
-    @apply relative rounded-lg px-3 py-2 text-sm font-medium text-white/80 transition-colors hover:text-laser;
+    @apply relative inline-flex items-center whitespace-nowrap rounded-lg px-2.5 py-1.5 text-[13px] font-medium text-white/80 transition-all duration-200 hover:text-laser xl:px-3.5 xl:py-2 xl:text-sm;
   }
   .nav-link.is-active {
     @apply text-white;
   }
   .nav-link.is-active::after {
     content: "";
-    @apply absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-laser shadow-[0_0_8px_rgba(108,255,0,.8)];
+    @apply absolute inset-x-2.5 -bottom-0.5 h-0.5 rounded-full bg-laser shadow-[0_0_8px_rgba(108,255,0,.8)] xl:inset-x-3.5;
   }
 
   /* Status dot com pulso */
