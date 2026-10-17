@@ -1,0 +1,260 @@
+@import "tailwindcss";
+
+/* =========================================================
+   OnVision — Design System
+   Paleta Oficial:
+   - Preto Abissal: #050A07 (Fundo Principal)
+   - Verde Laser Ativo: #6CFF00 (Realce & Ação)
+   - Verde Técnico: #84C99E (Informações & Legenda)
+   - Branco Claro: #FFFFFF (Equipamento & Destaque)
+   - Cinza Robusto: #878A88 (Hardware & Uniforme)
+   - Verde Floresta Escuro: #133321 (Contraste & Profundidade)
+   ========================================================= */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", ui-sans-serif, sans-serif;
+
+  --color-abyss: #050A07;
+  --color-forest: #133321;
+  --color-laser: #6CFF00;
+  --color-tech: #84C99E;
+  --color-white: #FFFFFF;
+  --color-steel: #878A88;
+  --color-paper: #F8FAFC;
+  --color-ink: #1B2E23;
+
+  --animate-sweep: sweep 2.2s cubic-bezier(.45, 0, .55, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-ring: ring 2.6s cubic-bezier(.2, .6, .35, 1) infinite;
+  --animate-scanline: scanline 6s linear infinite;
+  --animate-blink: blink 1.2s steps(2, start) infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+
+  @keyframes sweep {
+    0% { transform: translateY(-10%); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(1100%); opacity: 0; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes ring {
+    0% { transform: scale(.85); opacity: .7; }
+    100% { transform: scale(1.6); opacity: 0; }
+  }
+  @keyframes scanline {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+  }
+  @keyframes blink {
+    to { visibility: hidden; }
+  }
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-abyss font-sans text-tech antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-white;
+  }
+  ::selection {
+    background: rgb(108 255 0 / .35);
+    color: #050A07;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-laser);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+/* ---------- Components ---------- */
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase;
+  }
+
+  .btn {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-[15px] font-bold whitespace-nowrap transition-all duration-300 ease-out select-none disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply bg-laser text-abyss shadow-[0_12px_32px_-10px_rgba(108,255,0,.45)] hover:-translate-y-0.5 hover:bg-white hover:text-abyss hover:shadow-[0_16px_36px_-8px_rgba(255,255,255,.35)] active:translate-y-0;
+  }
+  .btn-ghost-dark {
+    @apply border border-white/12 bg-white/[0.04] text-white backdrop-blur hover:border-laser/50 hover:bg-white/[0.08] hover:text-laser;
+  }
+  .btn-whatsapp {
+    @apply border border-laser/35 bg-laser/10 text-white hover:border-laser/80 hover:bg-laser/20;
+  }
+  .btn-laser {
+    @apply bg-laser text-abyss shadow-[0_12px_32px_-10px_rgba(108,255,0,.5)] hover:-translate-y-0.5 hover:bg-white;
+  }
+
+  .nav-link {
+    @apply relative rounded-lg px-3 py-2 text-sm font-medium text-white/80 transition-colors hover:text-laser;
+  }
+  .nav-link.is-active {
+    @apply text-white;
+  }
+  .nav-link.is-active::after {
+    content: "";
+    @apply absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-laser shadow-[0_0_8px_rgba(108,255,0,.8)];
+  }
+
+  /* Status dot com pulso */
+  .status-dot {
+    @apply relative inline-flex size-2.5 shrink-0;
+  }
+  .status-dot::before {
+    content: "";
+    @apply absolute inset-0 animate-ping rounded-full bg-laser opacity-75;
+  }
+  .status-dot::after {
+    content: "";
+    @apply relative inline-flex size-2.5 rounded-full bg-laser shadow-[0_0_8px_rgba(108,255,0,.9)];
+  }
+
+  /* Painel de telemetria */
+  .panel-cell {
+    @apply rounded-xl border border-forest/70 bg-forest/35 p-3 transition-all duration-500;
+  }
+  .panel-cell.is-scanning {
+    @apply border-laser bg-laser/10 shadow-[0_0_0_4px_rgba(108,255,0,.15)];
+  }
+  .panel-cell.is-ok {
+    @apply border-laser/50 bg-forest/50;
+  }
+
+  .cam-tile {
+    @apply relative aspect-video overflow-hidden rounded-lg border border-forest/80 bg-abyss bg-cover transition-all duration-500;
+    background-image: url("/images/cctv-feed.jpg");
+  }
+  .cam-tile::before {
+    /* scanlines */
+    content: "";
+    @apply pointer-events-none absolute inset-0 z-[1] animate-scanline;
+    background-image: repeating-linear-gradient(0deg, rgb(0 0 0 / .35) 0 1px, transparent 1px 3px);
+    background-size: 100% 300%;
+  }
+  .cam-tile::after {
+    /* vinheta */
+    content: "";
+    @apply pointer-events-none absolute inset-0 z-[1];
+    background: radial-gradient(120% 90% at 50% 50%, transparent 55%, rgb(5 10 7 / .85));
+  }
+  .cam-tile.is-scanning {
+    @apply border-laser shadow-[0_0_0_3px_rgba(108,255,0,.35)];
+  }
+
+  /* Cards de soluções */
+  .service-card {
+    @apply relative flex flex-col rounded-3xl border border-forest/15 bg-white p-7 shadow-[0_4px_20px_-8px_rgba(5,10,7,.08)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-forest hover:shadow-[0_30px_60px_-25px_rgba(19,51,33,.25)] sm:p-8;
+  }
+  .service-card.is-hidden {
+    @apply pointer-events-none scale-95 opacity-0;
+  }
+  .filter-chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-forest/15 bg-white px-4 py-2 text-sm font-semibold text-ink transition-all duration-300 hover:border-forest hover:text-forest;
+  }
+  .filter-chip.is-active {
+    @apply border-forest bg-forest text-white shadow-lg shadow-forest/20;
+  }
+  .tag {
+    @apply inline-flex items-center rounded-md bg-forest/10 px-2 py-1 text-[11px] font-semibold tracking-wide text-forest uppercase;
+  }
+
+  /* Simulador */
+  .sim-option {
+    @apply relative flex cursor-pointer items-center gap-4 rounded-2xl border border-forest/80 bg-forest/30 p-4 transition-all duration-300 hover:border-laser/50 hover:bg-forest/50 has-checked:border-laser has-checked:bg-laser/[0.08] has-checked:shadow-[0_0_0_3px_rgba(108,255,0,.15)] has-focus-visible:ring-2 has-focus-visible:ring-laser;
+  }
+  .sim-check {
+    @apply ml-auto grid size-6 shrink-0 place-items-center rounded-full border border-forest text-transparent transition-all duration-300 group-has-checked:border-laser group-has-checked:bg-laser group-has-checked:text-abyss;
+  }
+  .field {
+    @apply w-full rounded-xl border border-forest/80 bg-forest/30 px-4 py-3.5 text-white placeholder:text-steel transition-all duration-300 outline-none focus:border-laser focus:bg-forest/50 focus:ring-4 focus:ring-laser/15;
+  }
+  .field.is-invalid {
+    @apply border-rose-400/70 ring-4 ring-rose-400/10;
+  }
+  .step-pill {
+    @apply flex items-center gap-2.5 text-sm font-semibold text-steel transition-colors duration-300;
+  }
+  .step-pill .step-num {
+    @apply grid size-8 place-items-center rounded-full border border-forest bg-abyss text-xs transition-all duration-300;
+  }
+  .step-pill.is-current { @apply text-white; }
+  .step-pill.is-current .step-num { @apply border-laser bg-laser font-bold text-abyss shadow-[0_0_0_5px_rgba(108,255,0,.18)]; }
+  .step-pill.is-done { @apply text-tech; }
+  .step-pill.is-done .step-num { @apply border-tech/50 bg-forest text-laser; }
+}
+
+/* ---------- Utilities / Effects ---------- */
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(rgb(132 201 158 / .06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(132 201 158 / .06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .bg-grid-light {
+    background-image:
+      linear-gradient(rgb(19 51 33 / .05) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(19 51 33 / .05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, #000 40%, transparent);
+  }
+  .mask-radial {
+    mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+  }
+  .text-gradient {
+    @apply bg-linear-to-r from-white via-laser to-tech bg-clip-text text-transparent;
+  }
+  .text-gradient-laser {
+    @apply bg-linear-to-r from-laser via-laser to-tech bg-clip-text text-transparent;
+  }
+  .glass {
+    @apply border border-forest/80 bg-forest/60 backdrop-blur-xl;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .9s cubic-bezier(.2, .7, .2, 1), transform .9s cubic-bezier(.2, .7, .2, 1);
+    transition-delay: var(--d, 0ms);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Barra de rolagem discreta no log */
+.scan-log::-webkit-scrollbar { width: 4px; }
+.scan-log::-webkit-scrollbar-thumb { background: rgb(132 201 158 / .25); border-radius: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
