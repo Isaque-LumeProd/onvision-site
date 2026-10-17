@@ -26,6 +26,7 @@ export default defineConfig({
         'ribas-do-rio-pardo': resolve('ribas-do-rio-pardo/index.html'),
         cassilandia: resolve('cassilandia/index.html'),
         'chapadao-do-sul': resolve('chapadao-do-sul/index.html'),
+        historia: resolve('historia/index.html'),
       },
     },
   },
